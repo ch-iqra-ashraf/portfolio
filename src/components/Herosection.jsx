@@ -11,7 +11,6 @@ const Hero = () => {
     >
       <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
         <div className="flex flex-col justify-center">
-
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-5 leading-[1.05] font-['Dancing_Script']">
             {heroContent.name}
           </h1>
@@ -25,11 +24,15 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
-            <button className="w-full sm:w-auto text-center bg-[#1a1a1a] hover:bg-[#d9552c] text-white font-bold text-xs uppercase tracking-widest px-7 py-3.5 rounded transition-all duration-300">
-              {heroContent.primaryCta}
-            </button>
             <a
-              href="#"
+              href="#projects"
+              className="w-full sm:w-auto text-center bg-[#1a1a1a] hover:bg-[#d9552c] text-white font-bold text-xs uppercase tracking-widest px-7 py-3.5 rounded transition-all duration-300 block"
+            >
+              {heroContent.primaryCta}
+            </a>
+            <a
+              href="/my-cv.pdf"
+              download="My_CV.pdf"
               className="font-bold text-xs uppercase tracking-widest text-[#1a1a1a] border-b-2 border-[#1a1a1a] hover:border-[#d9552c] hover:text-[#d9552c] pb-1 transition-colors duration-300"
             >
               {heroContent.secondaryCta}
@@ -42,10 +45,9 @@ const Hero = () => {
             data={webDeveloperAnimation}
             loop
             autoplay
-            style={{ width: '100%', height: '100%' }}
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
-
       </div>
     </section>
   );

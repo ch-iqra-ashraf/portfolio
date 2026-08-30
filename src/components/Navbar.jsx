@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Navbar = () => {
-  const [activeItem, setActiveItem] = useState('Home');
+  const [activeItem, setActiveItem] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navItems = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'];
+  const navItems = [
+    "Home",
+    "About",
+    "Skills",
+    "Projects",
+    "Experience",
+    "Contact",
+  ];
 
   const handleNavClick = (item) => {
     setActiveItem(item);
@@ -26,7 +33,9 @@ const Navbar = () => {
             href={`#${item.toLowerCase()}`}
             onClick={() => handleNavClick(item)}
             className={`relative py-1 text-sm font-medium transition-colors duration-300 ${
-              activeItem === item ? 'text-[#d9552c]' : 'text-[#6b6b6b] hover:text-[#1a1a1a]'
+              activeItem === item
+                ? "text-[#d9552c]"
+                : "text-[#6b6b6b] hover:text-[#1a1a1a]"
             }`}
           >
             {item}
@@ -49,15 +58,25 @@ const Navbar = () => {
         className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none z-50"
         aria-label="Toggle Menu"
       >
-        <span className={`h-0.5 w-6 bg-[#1a1a1a] rounded-full transition-all duration-300 transform ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-        <span className={`h-0.5 w-6 bg-[#1a1a1a] rounded-full transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
-        <span className={`h-0.5 w-6 bg-[#1a1a1a] rounded-full transition-all duration-300 transform ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+        <span
+          className={`h-0.5 w-6 bg-[#1a1a1a] rounded-full transition-all duration-300 transform ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+        />
+        <span
+          className={`h-0.5 w-6 bg-[#1a1a1a] rounded-full transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`}
+        />
+        <span
+          className={`h-0.5 w-6 bg-[#1a1a1a] rounded-full transition-all duration-300 transform ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+        />
       </button>
 
       {/* Full Screen / Slide Down Mobile Drawer Overlay Menu */}
-      <div className={`fixed inset-0 bg-[#faf7f2]/98 flex flex-col items-center justify-center gap-8 md:hidden transition-all duration-300 z-40 ${
-        isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
-      }`}>
+      <div
+        className={`fixed inset-0 bg-[#faf7f2]/98 flex flex-col items-center justify-center gap-8 md:hidden transition-all duration-300 z-40 ${
+          isMenuOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible pointer-events-none"
+        }`}
+      >
         <div className="flex flex-col items-center gap-6 w-full px-8">
           {navItems.map((item) => (
             <a
@@ -65,7 +84,9 @@ const Navbar = () => {
               href={`#${item.toLowerCase()}`}
               onClick={() => handleNavClick(item)}
               className={`text-xl font-medium tracking-wide py-2 transition-colors duration-300 ${
-                activeItem === item ? 'text-[#d9552c]' : 'text-[#3a3a3a] hover:text-[#1a1a1a]'
+                activeItem === item
+                  ? "text-[#d9552c]"
+                  : "text-[#3a3a3a] hover:text-[#1a1a1a]"
               }`}
             >
               {item}

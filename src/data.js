@@ -1,5 +1,15 @@
 import { CssIcon, HtmlIcon, JsIcon, ReactIcon, TailwindIcon } from './components/Icons.jsx';
-
+import chatWithAi from "./assets/projects/chat-with-ai.png";
+import countryInfo from "./assets/projects/country-info.png";
+import weatherWebsite from "./assets/projects/weather-website.png";
+import calculator from "./assets/projects/calculator.png";
+import rockPaperScissor from "./assets/projects/rock-paper-scissor.png";
+import ticTacToe from "./assets/projects/tic-tac-toe.png";
+import toDoApp from "./assets/projects/to-do-app.png";
+import babyPlanetClone from "./assets/projects/baby-planet-clone.png";
+import amazonClone from "./assets/projects/amazon-clone.png";
+import mdstWebsite from "./assets/projects/mdst-website.png";
+import vidify from "./assets/projects/vidify.png";
 
 export const heroContent = {
   eyebrow: 'Frontend Developer',
@@ -75,3 +85,106 @@ export const skillsData = [
     'React',
     'Firebase',
 ]
+
+
+export const projectsData = [
+  {
+    id: 1,
+    name: "Chat with AI",
+    description:
+      "A real-time AI chat application built with React, React Query, and Firebase. Features instant messaging, cached query states for fast repeat interactions, and seamless integration with an AI backend for conversational responses.",
+    skills: ["React", "React Query", "Firebase", "Tailwind CSS"],
+    imageUrl: chatWithAi,
+    projectUrl: "https://chat-with-ai-dun.vercel.app/",
+  },
+  {
+    id: 3,
+    name: "Country Info",
+    description:
+      "An interactive country explorer built with React, pulling real-time data from a countries API — covering population, region, currency, and other key details in a searchable, filterable layout.",
+    skills: ["React", "API Integration", "Tailwind CSS"],
+    imageUrl: countryInfo,
+    projectUrl: "https://country-info-xi-kohl.vercel.app/",
+  },
+  {
+    id: 4,
+    name: "Weather Website",
+    description:
+      "A real-time weather tracking app built with React, using a weather API to display live conditions and forecasts by city, with a dynamic interface that adapts to the data returned.",
+    skills: ["React", "API Integration", "Tailwind CSS"],
+    imageUrl: weatherWebsite,
+    projectUrl: "https://weather-react-app-gamma-black.vercel.app/",
+  },
+  {
+    id: 5,
+    name: "Vidify Project",
+    description:
+      "A media/video discovery platform focused on clean browsing and search functionality, built with a strong emphasis on responsive layout and smooth navigation.",
+    skills: ["React", "JavaScript", "Tailwind CSS"],
+    imageUrl: vidify,
+    projectUrl: "https://vidify-project.vercel.app/",
+  },
+  {
+    id: 6,
+    name: "Calculator",
+    description:
+      "A fully functional calculator app built with React and Tailwind CSS, supporting standard arithmetic operations, keyboard input, and safe expression evaluation.",
+    skills: ["React", "Tailwind CSS"],
+    imageUrl: calculator,
+    projectUrl: "https://calculator-react-zeta-ten.vercel.app/",
+  },
+  {
+    id: 7,
+    name: "Rock Paper Scissor",
+    description:
+      "A classic Rock Paper Scissors game built with vanilla JavaScript and styled with Tailwind CSS, featuring score tracking and instant round results.",
+    skills: ["JavaScript", "Tailwind CSS"],
+    imageUrl: rockPaperScissor,
+    projectUrl: "https://rock-paper-scissor-ashy-kappa.vercel.app/",
+  },
+  {
+    id: 8,
+    name: "Tic Tac Toe",
+    description:
+      "An interactive Tic Tac Toe game built with JavaScript, featuring win/draw detection logic and a responsive Tailwind CSS interface.",
+    skills: ["JavaScript", "Tailwind CSS"],
+    imageUrl: ticTacToe,
+    projectUrl: "https://tic-tac-toe-lake-iota.vercel.app/",
+  },
+  {
+    id: 9,
+    name: "To Do App",
+    description:
+      "A task management to-do app built with JavaScript, supporting task creation, completion toggling, and deletion, with a clean Tailwind CSS interface.",
+    skills: ["JavaScript", "Tailwind CSS"],
+    imageUrl: toDoApp,
+    projectUrl: "https://to-do-app-cyan-nu.vercel.app/",
+  },
+  {
+    id: 10,
+    name: "Baby Planet Website Clone",
+    description:
+      "A responsive storefront clone for a children's product brand, built with HTML and Tailwind CSS — focused on clean product grids and mobile-first layout.",
+    skills: ["HTML", "Tailwind CSS"],
+    imageUrl: babyPlanetClone,
+    projectUrl: "https://mino-omega.vercel.app/",
+  },
+  {
+    id: 11,
+    name: "Amazon Clone",
+    description:
+      "A pixel-focused clone of Amazon's storefront layout, built with HTML and Tailwind CSS as a practice project in replicating complex, high-traffic e-commerce UI.",
+    skills: ["HTML", "Tailwind CSS"],
+    imageUrl: amazonClone,
+    projectUrl: "https://amazon-css.vercel.app/",
+  },
+  {
+    id: 12,
+    name: "MDST Website",
+    description:
+      "A multi-page website for a modest fashion brand, built with React and React Router for client-side navigation, styled with Tailwind CSS for a polished, responsive experience.",
+    skills: ["React", "React Router", "Tailwind CSS"],
+    imageUrl: mdstWebsite,
+    projectUrl: "https://mdst-react-three.vercel.app/",
+  },
+];
