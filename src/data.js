@@ -10,6 +10,8 @@ import babyPlanetClone from "./assets/projects/baby-planet-clone.png";
 import amazonClone from "./assets/projects/amazon-clone.png";
 import mdstWebsite from "./assets/projects/mdst-website.png";
 import vidify from "./assets/projects/vidify.png";
+import currencyConvertor from "./assets/projects/currency-convertor.png";
+
 
 export const heroContent = {
   eyebrow: 'Frontend Developer',
@@ -96,6 +98,7 @@ export const projectsData = [
     skills: ["React", "React Query", "Firebase", "Tailwind CSS"],
     imageUrl: chatWithAi,
     projectUrl: "https://chat-with-ai-dun.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/chat-with-ai",
   },
   {
     id: 3,
@@ -105,6 +108,7 @@ export const projectsData = [
     skills: ["React", "API Integration", "Tailwind CSS"],
     imageUrl: countryInfo,
     projectUrl: "https://country-info-xi-kohl.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/country_info",
   },
   {
     id: 4,
@@ -114,6 +118,7 @@ export const projectsData = [
     skills: ["React", "API Integration", "Tailwind CSS"],
     imageUrl: weatherWebsite,
     projectUrl: "https://weather-react-app-gamma-black.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/weather-react-app-",
   },
   {
     id: 5,
@@ -123,6 +128,7 @@ export const projectsData = [
     skills: ["React", "JavaScript", "Tailwind CSS"],
     imageUrl: vidify,
     projectUrl: "https://vidify-project.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/vidify-project",
   },
   {
     id: 6,
@@ -132,7 +138,21 @@ export const projectsData = [
     skills: ["React", "Tailwind CSS"],
     imageUrl: calculator,
     projectUrl: "https://calculator-react-zeta-ten.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/calculator",
   },
+  
+{
+  id: 13,
+  name: "Currency Converter",
+  description: "A dynamic currency converter built with vanilla JavaScript, HTML, and Tailwind CSS, featuring real-time exchange rate fetching and a clean, responsive user interface.",
+  skills: ["JavaScript", "HTML", "Tailwind CSS"],
+  imageUrl: currencyConvertor,
+  projectUrl: "https://currency-convertor-tan-beta.vercel.app/",
+  codeUrl: "https://github.com/ch-iqra-ashraf/currency-convertor"
+},
+
+
+
   {
     id: 7,
     name: "Rock Paper Scissor",
@@ -141,6 +161,7 @@ export const projectsData = [
     skills: ["JavaScript", "Tailwind CSS"],
     imageUrl: rockPaperScissor,
     projectUrl: "https://rock-paper-scissor-ashy-kappa.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/rock-paper-scissor",
   },
   {
     id: 8,
@@ -150,6 +171,7 @@ export const projectsData = [
     skills: ["JavaScript", "Tailwind CSS"],
     imageUrl: ticTacToe,
     projectUrl: "https://tic-tac-toe-lake-iota.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/tic-tac-toe",
   },
   {
     id: 9,
@@ -159,6 +181,7 @@ export const projectsData = [
     skills: ["JavaScript", "Tailwind CSS"],
     imageUrl: toDoApp,
     projectUrl: "https://to-do-app-cyan-nu.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/to-do-app",
   },
   {
     id: 10,
@@ -168,6 +191,7 @@ export const projectsData = [
     skills: ["HTML", "Tailwind CSS"],
     imageUrl: babyPlanetClone,
     projectUrl: "https://mino-omega.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/baby-realms",
   },
   {
     id: 11,
@@ -177,6 +201,8 @@ export const projectsData = [
     skills: ["HTML", "Tailwind CSS"],
     imageUrl: amazonClone,
     projectUrl: "https://amazon-css.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/amazon-css",
+
   },
   {
     id: 12,
@@ -186,5 +212,6 @@ export const projectsData = [
     skills: ["React", "React Router", "Tailwind CSS"],
     imageUrl: mdstWebsite,
     projectUrl: "https://mdst-react-three.vercel.app/",
+    codeUrl:"https://github.com/ch-iqra-ashraf/mdst-react",
   },
 ];
