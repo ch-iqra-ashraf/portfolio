@@ -36,7 +36,13 @@ function SkillIcon({ skill }) {
     );
   }
 
-  return <img src={icon} alt={skill} className="pointer-events-none h-12.5" />;
+  return (
+    <img
+      src={icon}
+      alt={skill}
+      className="pointer-events-none h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 max-w-full max-h-full object-contain"
+    />
+  );
 }
 
 // 4. Main Skills Component — icon marquee + categorized progress bars, one file
@@ -56,29 +62,29 @@ function Skills() {
       <div className="mt-10 w-full overflow-hidden">
         <div className="group w-full overflow-hidden">
           <div className="flex w-max animate-scroll-left group-hover:[animation-play-state:paused]">
-            {/* Render the list twice back-to-back so the loop is seamless */}
-            {skillsData.map((skill, id) => (
-              <div
-                key={`a-${id}`}
-                className="mx-6 flex h-40 w-40 shrink-0 flex-col items-center justify-center rounded-xl bg-neutral-50 p-6 shadow-[0px_10px_20px_rgba(0,0,0,0.12)] transition-transform duration-300 ease-in-out hover:scale-[1.15]"
-              >
-                <SkillIcon skill={skill} />
-                <h3 className="mt-4 text-center text-lg font-medium text-neutral-800">
-                  {skill}
-                </h3>
-              </div>
-            ))}
-            {skillsData.map((skill, id) => (
-              <div
-                key={`b-${id}`}
-                className="mx-6 flex h-40 w-40 shrink-0 flex-col items-center justify-center rounded-xl bg-neutral-50 p-6 shadow-[0px_10px_20px_rgba(0,0,0,0.12)] transition-transform duration-300 ease-in-out hover:scale-[1.15]"
-              >
-                <SkillIcon skill={skill} />
-                <h3 className="mt-4 text-center text-lg font-medium text-neutral-800">
-                  {skill}
-                </h3>
-              </div>
-            ))}
+           {/* Render the list twice back-to-back so the loop is seamless */}
+{skillsData.map((skill, id) => (
+  <div
+    key={`a-${id}`}
+    className="mx-2 sm:mx-4 md:mx-6 flex h-20 w-20 sm:h-28 sm:w-28 md:h-40 md:w-40 shrink-0 flex-col items-center justify-center rounded-xl bg-neutral-50 p-2 sm:p-3 md:p-6 shadow-[0px_10px_20px_rgba(0,0,0,0.12)] transition-transform duration-300 ease-in-out hover:scale-[1.15]"
+  >
+    <SkillIcon skill={skill} />
+    <h3 className="mt-1 sm:mt-2 md:mt-4 text-center text-[10px] sm:text-xs md:text-lg font-medium text-neutral-800">
+      {skill}
+    </h3>
+  </div>
+))}
+{skillsData.map((skill, id) => (
+  <div
+    key={`b-${id}`}
+    className="mx-2 sm:mx-4 md:mx-6 flex h-20 w-20 sm:h-28 sm:w-28 md:h-40 md:w-40 shrink-0 flex-col items-center justify-center rounded-xl bg-neutral-50 p-2 sm:p-3 md:p-6 shadow-[0px_10px_20px_rgba(0,0,0,0.12)] transition-transform duration-300 ease-in-out hover:scale-[1.15]"
+  >
+    <SkillIcon skill={skill} />
+    <h3 className="mt-1 sm:mt-2 md:mt-4 text-center text-[10px] sm:text-xs md:text-lg font-medium text-neutral-800">
+      {skill}
+    </h3>
+  </div>
+))}
           </div>
         </div>
       </div>
