@@ -54,9 +54,9 @@ function Skills() {
     >
       {/* --- Marquee section --- */}
       <div className="flex items-center justify-center">
-        <h2 className="text-center text-5xl font-bold font-['Dancing_Script']">
-          Skills
-        </h2>
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-bold font-['Dancing_Script']">
+  Skills
+</h2>
       </div>
 
       <div className="mt-10 w-full overflow-hidden">

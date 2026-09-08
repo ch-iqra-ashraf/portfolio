@@ -38,7 +38,7 @@ const Hero = () => {
             <a
               href="/my-cv.pdf"
               download="My_CV.pdf"
-              className="w-full sm:w-auto text-center bg-[#1a1a1a] hover:bg-[#d9552c] text-white font-bold text-[11px] sm:text-xs uppercase tracking-widest px-5 py-2.5 sm:px-7 sm:py-3.5 rounded transition-all duration-300 block"
+              className="inline-block text-center bg-[#1a1a1a] hover:bg-[#d9552c] text-white font-bold text-[11px] sm:text-xs uppercase tracking-widest px-6 py-2.5 sm:px-7 sm:py-3.5 rounded transition-all duration-300"
             >
               {heroContent.secondaryCta}
             </a>
