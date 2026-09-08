@@ -57,7 +57,7 @@ const Navbar = () => {
       </button>
 
       
-     {/* Mobile Drawer — rendered via portal so backdrop-blur on <nav> can't clip its "fixed" positioning */}
+    
 {createPortal(
   <div
     className={`fixed inset-0 flex flex-col items-center justify-center gap-8 md:hidden z-40 ${
