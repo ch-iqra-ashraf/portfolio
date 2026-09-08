@@ -57,41 +57,44 @@ const Navbar = () => {
       </button>
 
       
-      {createPortal(
-        <div
-          className={`fixed inset-0 flex flex-col items-center justify-center gap-8 md:hidden transition-all duration-300 z-40 ${
-            isMenuOpen
-              ? "visible pointer-events-auto"
-              : "invisible pointer-events-none"
+     {/* Mobile Drawer — rendered via portal so backdrop-blur on <nav> can't clip its "fixed" positioning */}
+{createPortal(
+  <div
+    className={`fixed inset-0 flex flex-col items-center justify-center gap-8 md:hidden z-40 ${
+      isMenuOpen ? "pointer-events-auto" : "pointer-events-none"
+    }`}
+  >
+    <div
+      className={`absolute inset-0 bg-white transition-opacity duration-300 ${
+        isMenuOpen ? "opacity-100" : "opacity-0"
+      }`}
+    />
+    <div
+      className={`relative flex flex-col items-center gap-6 w-full px-8 transition-opacity duration-300 ${
+        isMenuOpen ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      {navItems.map((item) => (
+        <a
+          key={item}
+          href={`#${item.toLowerCase()}`}
+          onClick={() => handleNavClick(item)}
+          className={`text-xl font-medium tracking-wide py-2 transition-colors duration-300 ${
+            activeItem === item
+              ? "text-[#d9552c]"
+              : "text-[#3a3a3a] hover:text-[#1a1a1a]"
           }`}
         >
-          <div
-            className={`absolute inset-0 bg-white transition-opacity duration-300 ${
-              isMenuOpen ? "opacity-100" : "opacity-0"
-            }`}
-          />
-          <div className="relative flex flex-col items-center gap-6 w-full px-8">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                onClick={() => handleNavClick(item)}
-                className={`text-xl font-medium tracking-wide py-2 transition-colors duration-300 ${
-                  activeItem === item
-                    ? "text-[#d9552c]"
-                    : "text-[#3a3a3a] hover:text-[#1a1a1a]"
-                }`}
-              >
-                {item}
-              </a>
-            ))}
-            <button className="mt-4 w-full max-w-50 bg-[#1a1a1a] hover:bg-[#d9552c] text-white font-bold text-sm uppercase tracking-wider px-5 py-3 rounded transition-all duration-300">
-              Hire Me
-            </button>
-          </div>
-        </div>,
-        document.body
-      )}
+          {item}
+        </a>
+      ))}
+      <button className="mt-4 w-full max-w-50 bg-[#1a1a1a] hover:bg-[#d9552c] text-white font-bold text-sm uppercase tracking-wider px-5 py-3 rounded transition-all duration-300">
+        Hire Me
+      </button>
+    </div>
+  </div>,
+  document.body
+)}
     </nav>
   );
 };
